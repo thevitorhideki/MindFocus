@@ -5,46 +5,74 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aplicativo | Diário</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/diario.css">
     </head>
 
     <body>
         <header>
-            <figure>
-                <a href="./index.html">
-                    <img src="./img/back.png" alt="Voltar">
-                </a>
-            </figure>
-            <h1>Diário</h1>
+            <a href="./index.html">
+                <img src="./img/back.png" alt="Voltar">
+            </a>
+            <h1>DIÁRIO</h1>
         </header>
-        <main>
-            <ul>
-                <li>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque lorem ex, pretium in
-                        rhoncus euismod, porttitor vitae odio. Donec lacinia.
-                    </p>
-                    <p>12/09</p>
-                </li>
-                <li>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque lorem ex, pretium in
-                        rhoncus euismod, porttitor vitae odio. Donec lacinia.
-                    </p>
-                    <p>11/09</p>
-                </li>
-                <li>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque lorem ex, pretium in
-                        rhoncus euismod, porttitor vitae odio. Donec lacinia.
-                    </p>
-                    <p>10/09</p>
-                </li>
-            </ul>
-            <figure>
-                <a href="./nova_nota.html">
-                    <img src="./img/add.png" alt="Adicionar nova nota">
+        <nav>
+            <div class="mes">
+                <a href="#">
+                    <img src="./img/nxtm.png" alt="mês anterior">
                 </a>
-            </figure>
+                <h2>Setembro</h2>
+                <a href="#">
+                    <img src="./img/nxtm.png" alt="próximo mês">
+                </a>
+            </div>
+            <div class="semana">
+                <div class="dia dom">
+                    <h3>17</h3>
+                    <h4>DOM</h4>
+                </div>
+                <div class="dia">
+                    <h3>18</h3>
+                    <h4>SEG</h4>
+                </div>
+                <div class="dia">
+                    <h3>19</h3>
+                    <h4>TER</h4>
+                </div>
+                <div class="dia qua">
+                    <h3>20</h3>
+                    <h4>QUA</h4>
+                </div>
+                <div class="dia qui">
+                    <h3>21</h3>
+                    <h4>QUI</h4>
+                </div>
+                <div class="dia sex">
+                    <h3>22</h3>
+                    <h4>SEX</h4>
+                </div>
+                <div class="dia sab">
+                    <h3>23</h3>
+                    <h4>SAB</h4>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="posneg">
+                <section>
+                    <h2>Positivos</h2>
+                </section>
+                <section>
+                    <h2>Negativos</h2>
+                </section>
+            </div>
+            <p>
+                Clique no botão para adicionar uma nova nota
+            </p>
+            <a href="./nova_nota.html">
+                <div class="circulo"></div>
+                <div class="mais">+</div>
+            </a>
         </main>
     </body>
 
