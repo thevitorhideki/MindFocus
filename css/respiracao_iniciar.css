@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 3.125rem 0;
+    position: relative;
+}
+
+header a {
+    margin-left: 1.25rem;
+    font-size: 0;
+}
+
+header img {
+    width: 2.375rem;
+    height: 2.375rem;
+    transform: rotate(180deg);
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+}
+
+main a {
+    height: 11.625rem;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 100%;
+    border: 3px solid black;
+}
