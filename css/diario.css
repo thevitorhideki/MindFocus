@@ -118,8 +118,8 @@ section h2 {
 main p {
     font-size: 0.875rem;
     align-self: center;
-    position: absolute;
-    top: 60%;
+    position: relative;
+    top: 7%;
 }
 
 main a {
