@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/chat.css">
         <title>Aplicativo | Chat</title>
     </head>
 
@@ -15,26 +17,40 @@
                     <img src="./img/back.png" alt="Voltar">
                 </a>
             </figure>
-            <h1>CHATS EM GRUPO</h1>
+            <h1>CHATS</h1>
         </header>
 
         <main>
             <!-- Barra de pesquisa -->
-            <input type="text" placeholder="Pesquisar...">
-            <img src="img/lupa.png" alt="Lupa de pesquisa">
-
+            <section class="busca">
+                <input type="text" placeholder="Pesquisar...">
+                <img class="lupa" src="img/lupa.png" alt="Lupa de pesquisa">
+            </section>
+            
             <!-- Chats disponíveis -->
-            <h2>Frustrações no trabalho</h2>
-            <p>15 pessoas</p>
-            <a href="chat_errado.html">Entrar</a>
+            <section class="chat">
+                <h2>Frustrações no trabalho</h2>
+                <p>15 pessoas</p>
+                <a href="chat_errado.html">Entrar</a>
+            </section>
+            
+            <section class="chat">
+                <h2>Vestibular MedUSP</h2>
+                <p>23 pessoas</p>
+                <a href="chat_certo.html">Entrar</a>
+            </section>
 
-            <h2>Vestibular MedUSP</h2>
-            <p>23 pessoas</p>
-            <a href="chat_certo.html">Entrar</a>
+            <section class="chat">
+                <h2>Problemas amorosos</h2>
+                <p>10 pessoas</p>
+                <a href="chat_errado.html">Entrar</a>
+            </section>
 
-            <h2>Problemas amorosos</h2>
-            <p>10 pessoas</p>
-            <a href="chat_errado.html">Entrar</a>
+            <section class="chat">
+                <h2>Não aguento mais a faculdade</h2>
+                <p>14 pessoas</p>
+                <a href="chat_errado.html">Entrar</a>
+            </section>
         </main>
 
     </body>
