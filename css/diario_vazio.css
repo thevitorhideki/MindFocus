@@ -100,7 +100,6 @@ nav img[alt="mês anterior"] {
 main {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .posneg {

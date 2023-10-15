@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3.125rem 0 2.8125rem 0;
+    position: relative;
+}
+
+header a {
+    margin-left: 1.25rem;
+    font-size: 0;
+}
+
+header img[alt="Voltar"] {
+    width: 2.375rem;
+    height: 2.375rem;
+    transform: rotate(180deg);
+}
+
+header img[alt="Excluir"] {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 7.7%;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    height: 100%;
+}
+
+.nota {
+    background: #A5F4FF;
+    height: 100%;
+    border-top: 0.1875rem solid black;
+    border-radius: 0.9375rem 0.9375rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nota p {
+    font-weight: 550;
+    font-size: 1.2rem;
+    margin: 0.8rem;
+}
