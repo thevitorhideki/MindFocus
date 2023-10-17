@@ -12,8 +12,7 @@ header a {
 }
 
 header img {
-    width: 2.375rem;
-    height: 2.375rem;
+    max-width: 2.375rem;
     transform: rotate(180deg);
 }
 
