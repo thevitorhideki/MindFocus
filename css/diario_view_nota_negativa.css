@@ -14,7 +14,7 @@ header {
     position: relative;
 }
 
-header a {
+header a[href="./diario_nota_negativa.html"] {
     margin-left: 1.25rem;
     font-size: 0;
 }
@@ -25,7 +25,7 @@ header img[alt="Voltar"] {
     transform: rotate(180deg);
 }
 
-header img[alt="Excluir"] {
+header a[href="./diario_vazio.html"], header img[alt="Excluir"]{
     width: 3rem;
     height: 3rem;
     position: absolute;

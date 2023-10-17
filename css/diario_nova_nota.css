@@ -41,6 +41,10 @@ main {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .nota {
     height: 80%;
     width: 80%;

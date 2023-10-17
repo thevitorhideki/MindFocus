@@ -132,6 +132,19 @@ main a {
     bottom: 2rem;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a.qua:visited {
+    color: white;
+}
+
 .circulo {
     background: black;
     border-radius: 50%;

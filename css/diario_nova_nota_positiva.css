@@ -41,6 +41,10 @@ main {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .nota {
     height: 80%;
     width: 80%;
@@ -52,23 +56,13 @@ main {
     align-items: center;
 }
 
-textarea {
-    border: none;
-    margin: 1.5rem;
-    resize: none;
+.digitado {
     height: 100%;
     width: 81%;
-    font-family: inherit;
+    margin: 1.5rem;
     font-size: 1rem;
+    font-family: inherit;
     font-weight: 400;
-}
-
-textarea:focus {
-    outline: none;
-}
-
-::placeholder {
-    color: black;
 }
 
 .classificador {

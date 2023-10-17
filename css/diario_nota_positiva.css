@@ -107,6 +107,19 @@ main {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a.qua:visited {
+    color: white;
+}
+
 .posneg {
     display: flex;
     flex-direction: row;
@@ -154,7 +167,7 @@ section h2 {
     margin: 1.25rem 0;
 }
 
-main a {
+a[href="./diario_nova_nota.html"] {
     position: fixed;
     right: 2rem;
     bottom: 2rem;
