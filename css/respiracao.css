@@ -49,6 +49,18 @@ section {
     position: relative;
 }
 
+section.quadrada {
+    background-image: url(../img/respiracao_bg1.png);
+}
+
+section.diafragmatica {
+    background-image: url(../img/respiracao_bg2.png);
+}
+
+section.curativa {
+    background-image: url(../img/respiracao_bg3.png);
+}
+
 section a {
     color: white;
     text-decoration: none;
