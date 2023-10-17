@@ -14,8 +14,7 @@ header a {
 }
 
 header img {
-    width: 2.375rem;
-    height: 2.375rem;
+    max-width: 2.375rem;
     transform: rotate(180deg);
 }
 
@@ -37,8 +36,7 @@ main {
 }
 
 section {
-    width: 18.1875rem;
-    height: 18.1875rem;
+    width: 80%;
     display: flex;
     flex-direction: column;
     background-size: cover;
@@ -49,6 +47,18 @@ section {
     position: relative;
 }
 
+section.quadrada {
+    background-image: url(../img/respiracao_bg1.png);
+}
+
+section.diafragmatica {
+    background-image: url(../img/respiracao_bg2.png);
+}
+
+section.curativa {
+    background-image: url(../img/respiracao_bg3.png);
+}
+
 section a {
     color: white;
     text-decoration: none;
@@ -56,8 +66,7 @@ section a {
 }
 
 section img {
-    width: 1.25rem;
-    height: 1.25rem;
+    max-width: 1.25rem;
 }
 
 section h2 {
