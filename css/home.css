@@ -6,6 +6,10 @@ html {
     background-repeat: no-repeat;
 }
 
+body {
+    width: 100%;
+}
+
 header {
     width: 85%;
     margin: 3.75rem auto;
