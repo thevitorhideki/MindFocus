@@ -44,7 +44,7 @@ main {
 .nota {
     height: 80%;
     width: 80%;
-    border: 0.1875rem solid black;
+    border: 0.1875rem solid #FF686B;
     border-radius: 0.9375rem;
     display: flex;
     flex-direction: column;
@@ -100,11 +100,11 @@ textarea:focus {
 }
 
 .salvar {
-    border: 0.1875rem solid white;
+    border: 0.1875rem solid black;
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 1.25rem 1.44rem;
     font-weight: 700;
     margin: 2.25rem;
-    color: white;
+    color: black;
 }

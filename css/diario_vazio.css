@@ -40,7 +40,7 @@ nav {
     border-radius: 1.5625rem;
 }
 
-nav img[alt="mês anterior"] {
+nav img[alt="semana anterior"] {
     transform: rotate(180deg);
 }
 
@@ -59,7 +59,7 @@ nav img[alt="mês anterior"] {
 .semana {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     margin: 1.875rem 1.625rem;
 }
 
@@ -72,6 +72,7 @@ nav img[alt="mês anterior"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .dom {
