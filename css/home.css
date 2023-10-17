@@ -1,0 +1,65 @@
+html {
+    height: 100vh;
+    background-image: url("../img/novo_fundo4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 85%;
+    margin: 3.75rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1.75rem 1rem;
+    color: white;
+    border-radius: 1.875rem;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+}
+
+header div h1 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    text-wrap: nowrap;
+}
+
+header div p {
+    font-size: 0.75rem;
+}
+
+header div h1 span {
+    font-weight: bold;
+}
+
+nav {
+    width: 50%;
+    padding: 0.6rem 1rem;
+    position: fixed;
+    bottom: 3.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1.625rem;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.625rem;
+
+}
+
+nav a img {
+    max-width: 1.75rem;
+}
