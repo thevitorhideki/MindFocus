@@ -31,25 +31,84 @@ header h1 {
     transform: translateX(-50%);
     font-size: 2rem;
     font-weight: bold;
+    text-wrap: nowrap;
 }
 
 main {
-    height: 100%;
-}
-
-.nota {
-    background: #A5F4FF;
-    height: 100%;
-    border-top: 0.1875rem solid black;
-    border-radius: 0.9375rem 0.9375rem 0 0;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
 
-.nota p {
-    font-weight: 550;
-    font-size: 1.2rem;
-    margin: 0.8rem;
+a {
+    text-decoration: none;
+}
+
+.nota {
+    height: 80%;
+    width: 80%;
+    border: 0.1875rem solid black;
+    border-radius: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    border: none;
+    margin: 1.5rem;
+    resize: none;
+    height: 100%;
+    width: 81%;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+}
+
+.classificador {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.pos {
+    border: 0.1875rem solid #A5F4FF;
+    border-radius: 0.9375rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    font-weight: 400;
+    margin: 1rem;
+    color: black;
+    text-align: center;
+}
+
+.neg {
+    border: 0.1875rem solid #FF686B;
+    border-radius: 0.9375rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    font-weight: 400;
+    margin: 1rem;
+    color: black;
+    text-align: center;
+}
+
+.salvar {
+    border: 0.1875rem solid white;
+    border-radius: 0.9375rem;
+    font-size: 1rem;
+    padding: 1.25rem 1.44rem;
+    font-weight: 700;
+    margin: 2.25rem;
+    color: white;
 }
