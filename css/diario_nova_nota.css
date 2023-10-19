@@ -82,7 +82,7 @@ textarea:focus {
 }
 
 .pos {
-    border: 0.1875rem solid #A5F4FF;
+    border: 0.1875rem solid var(--positivo);
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 0.8rem 1rem;
@@ -93,7 +93,7 @@ textarea:focus {
 }
 
 .neg {
-    border: 0.1875rem solid #FF686B;
+    border: 0.1875rem solid var(--negativo);
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 0.8rem 1rem;
@@ -107,7 +107,7 @@ textarea:focus {
     border: 0.1875rem solid white;
     border-radius: 0.9375rem;
     font-size: 1rem;
-    padding: 1.25rem 1.44rem;
+    padding: 1rem 1.44rem;
     font-weight: 700;
     margin: 2.25rem;
     color: white;

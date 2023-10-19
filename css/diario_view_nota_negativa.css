@@ -25,7 +25,7 @@ header img[alt="Voltar"] {
     transform: rotate(180deg);
 }
 
-header a[href="./diario_vazio.html"], header img[alt="Excluir"]{
+header a[href="./diario_vazio.html"], header img[alt="Excluir"] {
     width: 3rem;
     height: 3rem;
     position: absolute;
@@ -45,9 +45,8 @@ main {
 }
 
 .nota {
-    background: #FF686B;
+    background: var(--negativo);
     height: 100%;
-    border-top: 0.1875rem solid black;
     border-radius: 0.9375rem 0.9375rem 0 0;
     display: flex;
     flex-direction: column;
@@ -59,5 +58,4 @@ main {
     font-weight: 500;
     font-size: 1.2rem;
     margin: 0.8rem;
-    color: white;
 }

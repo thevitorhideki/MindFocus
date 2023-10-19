@@ -48,7 +48,7 @@ a {
 .nota {
     height: 80%;
     width: 80%;
-    border: 0.1875rem solid #FF686B;
+    border: 0.1875rem solid var(--negativo);
     border-radius: 0.9375rem;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ a {
 }
 
 .pos {
-    border: 0.1875rem solid #A5F4FF;
+    border: 0.1875rem solid var(--positivo);
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 0.8rem 1rem;
@@ -83,7 +83,7 @@ a {
 }
 
 .neg {
-    border: 0.1875rem solid #FF686B;
+    border: 0.1875rem solid var(--negativo);
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 0.8rem 1rem;
@@ -97,7 +97,7 @@ a {
     border: 0.1875rem solid black;
     border-radius: 0.9375rem;
     font-size: 1rem;
-    padding: 1.25rem 1.44rem;
+    padding: 1rem 1.44rem;
     font-weight: 700;
     margin: 2.25rem;
     color: black;
