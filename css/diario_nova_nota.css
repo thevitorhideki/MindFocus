@@ -31,7 +31,7 @@ header h1 {
     transform: translateX(-50%);
     font-size: 2rem;
     font-weight: bold;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 main {
@@ -39,6 +39,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 .nota {

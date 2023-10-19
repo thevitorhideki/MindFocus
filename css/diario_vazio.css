@@ -44,6 +44,10 @@ nav img[alt="semana anterior"] {
     transform: rotate(180deg);
 }
 
+nav a {
+    text-decoration: none;
+}
+
 .mes {
     display: flex;
     flex-direction: row;
@@ -76,7 +80,7 @@ nav img[alt="semana anterior"] {
 }
 
 .dom {
-    padding: 1.25rem 0.3125rem;
+    padding: 1.25rem 0.375rem;
 }
 
 .qua {
@@ -126,6 +130,19 @@ main a {
     position: fixed;
     right: 2rem;
     bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a.qua:visited {
+    color: white;
 }
 
 .circulo {

@@ -30,7 +30,7 @@ header div {
 header div h1 {
     font-size: 2rem;
     margin-bottom: 0.7rem;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 header div p {
