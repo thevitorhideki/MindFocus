@@ -1,26 +1,23 @@
 header {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 3.125rem 1.75rem;
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+header a {
+    font-size: 0;
 }
 
 header img {
-    position: absolute;
-    left: 1.25rem;
-    top: 36%;
-    width: 2.375rem;
-    height: 2.375rem;
-    transform: rotate(180deg);
+    max-width: 1.5rem;
 }
 
 header h1 {
-    transform: translateX(5%);
-    font-size: 2.375rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    margin-left: 1rem;
 }
-
 
 figure {
     display: flex;
