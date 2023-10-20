@@ -1,0 +1,116 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+header a {
+    font-size: 0;
+}
+
+header img {
+    max-width: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+main {
+    padding: 0 1.75rem;
+}
+
+.busca {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 0.6rem;
+}
+
+.busca a {
+    font-size: 0;
+}
+
+form {
+    width: 100%;
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 0.625rem;
+}
+
+form img {
+    max-width: 1.5rem;
+    margin: 0 0.4rem;
+}
+
+input {
+    width: 100%;
+    margin-left: 0.4rem;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.filtro {
+    max-width: 1.5625rem;
+    border: 3px solid black;
+    padding: 0.4rem;
+    border-radius: 0.625rem;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 3px solid black;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    margin-bottom: 0.6rem;
+}
+
+h2 {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.tags {
+    display: flex;
+    margin-top: 0.6rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tags p {
+    font-size: 0.625rem;
+    background-color: #A5F4FF;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.8rem;
+}
+
+.bottom-container {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-container p {
+    font-size: 0.75rem;
+}
+
+.bottom-container a {
+    color: black;
+    font-size: 0.875rem;
+    text-decoration: none;
+}

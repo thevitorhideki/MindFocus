@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+header a {
+    font-size: 0;
+}
+
+header img {
+    max-width: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.75rem;
+}
+
+p {
+    max-width: 45%;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    background-color: var(--principal);
+    font-family: 'Inter', 'comic sans';
+    color: white;
+}
+
+.user {
+    align-self: flex-end;
+}
+
+.digitacao {
+    position: fixed;
+    display: flex;
+    bottom: 2%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.envio {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0 1.25rem;
+    margin-right: 1.75rem;
+}
+
+input {
+    height: 2.5rem;
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 0.625rem;
+    padding: 0 1.25rem;
+}

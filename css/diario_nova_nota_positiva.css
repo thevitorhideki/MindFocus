@@ -1,44 +1,36 @@
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    width: 100%;
     display: flex;
     align-items: center;
-    padding: 3.125rem 0 2.8125rem 0;
-    position: relative;
+    padding: 2rem 1rem;
 }
 
 header a {
-    margin-left: 1.25rem;
     font-size: 0;
 }
 
-header img[alt="Voltar"] {
-    width: 2.375rem;
-    height: 2.375rem;
-    transform: rotate(180deg);
+header img {
+    max-width: 1.5rem;
 }
 
 header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    white-space: nowrap;
+    margin-left: 1rem;
 }
+
 
 main {
     height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 a {
@@ -49,48 +41,46 @@ a {
     height: 80%;
     width: 80%;
     border: 0.1875rem solid var(--positivo);
-    border-radius: 0.9375rem;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    font-family: 'Inter';
 }
 
 .digitado {
     height: 100%;
-    width: 81%;
-    margin: 1.5rem;
+    width: 87%;
+    margin: 1rem;
     font-size: 1rem;
     font-family: inherit;
-    font-weight: 400;
 }
 
 .classificador {
-    display: flex;
     width: 100%;
-    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.classificador a {
+    min-width: 5rem;
+    padding: 1.15rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    line-height: 0;
 }
 
 .pos {
     border: 0.1875rem solid var(--positivo);
-    border-radius: 0.9375rem;
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    font-weight: 400;
-    margin: 1rem;
-    color: black;
-    text-align: center;
 }
 
 .neg {
     border: 0.1875rem solid var(--negativo);
-    border-radius: 0.9375rem;
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    font-weight: 400;
-    margin: 1rem;
-    color: black;
-    text-align: center;
 }
 
 .salvar {
