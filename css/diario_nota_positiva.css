@@ -117,8 +117,8 @@ section h2 {
 }
 
 .nota_pos {
+    width: 75%;
     background: var(--positivo);
-    max-width: 9.4375rem;
     border-radius: 1rem;
     margin: 1.25rem 0;
     display: flex;
@@ -130,7 +130,7 @@ section h2 {
 .nota_pos p {
     margin: 1rem;
     font-size: 0.8rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 main>a {

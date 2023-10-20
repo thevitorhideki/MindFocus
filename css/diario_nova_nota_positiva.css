@@ -45,7 +45,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Inter';
+    font-family: 'Roboto Slab', serif;
 }
 
 .digitado {
@@ -66,7 +66,7 @@ a {
 }
 
 .classificador a {
-    min-width: 5rem;
+    width: 30%;
     padding: 1.15rem 1rem;
     border-radius: 1rem;
     font-size: 1rem;

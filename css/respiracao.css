@@ -32,7 +32,7 @@ main h1 {
 main>p {
     font-size: 0.875rem;
     margin: 0 1rem 2rem 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 main .cards-container {
@@ -50,7 +50,7 @@ section {
     background-position: center;
     border-radius: 1rem;
     color: white;
-    filter: blur(2px);
+    filter: blur(0.125rem);
 }
 
 section.active {
@@ -61,6 +61,7 @@ section.active {
 }
 
 section.quadrada {
+    color: rgba(255, 255, 255, 0.0);
     background-image: url(../img/respiracao_bg1.png);
 }
 
@@ -69,6 +70,7 @@ section.diafragmatica {
 }
 
 section.curativa {
+    color: rgba(255, 255, 255, 0.0);
     background-image: url(../img/respiracao_bg3.png);
 }
 

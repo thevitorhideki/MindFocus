@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+:root {
+    --principal: #225473;
+    --secundario: #0F6CA6;
+    --terciaria: #FFC680;
+    --positivo: #C2E8FF;
+    --negativo: #FFE3C2;
+
+    --bordas: 0.15rem solid black;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,10 +59,4 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-:root {
-    --principal: #224D73;
-    --positivo: #77C0FF;
-    --negativo: #D9B29C;
 }
