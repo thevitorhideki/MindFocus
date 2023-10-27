@@ -31,13 +31,15 @@ p {
     margin-bottom: 1rem;
     border-radius: 0.625rem;
     padding: 1rem;
-    background-color: var(--principal);
+    background-color: #d5d5d5;
     font-family: 'Roboto Slab', serif;
-    color: white;
+    color: black;
 }
 
 .user {
+    background-color: var(--principal);
     align-self: flex-end;
+    color: white;
 }
 
 .digitacao {
