@@ -5,8 +5,13 @@ html, body {
 header {
     display: flex;
     align-items: center;
-    padding: 2rem 1rem;
-    background-color: white;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
 }
 
 header a {
@@ -23,27 +28,35 @@ header h1 {
     margin-left: 1rem;
 }
 
-main h1 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 0 1rem 0.4rem 1rem;
+main .descricao {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
 }
 
-main>p {
+main .descricao h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+main .descricao p {
     font-size: 0.875rem;
-    margin: 0 1rem 2rem 1rem;
     font-family: 'Roboto Slab', serif;
+    text-align: justify;
 }
 
 main .cards-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-left: 3rem;
+    gap: 1rem;
 }
 
 section {
-    min-height: 18.1875rem;
-    min-width: 18.1875rem;
+    min-width: 16rem;
+    min-height: 18rem;
     display: flex;
     flex-direction: column-reverse;
     background-size: cover;
@@ -51,27 +64,30 @@ section {
     border-radius: 1rem;
     color: white;
     filter: blur(0.125rem);
+    transition: min-height 0.5s ease-in-out;
 }
 
 section.active {
-    max-width: 18.1875rem;
-    min-height: 24.5rem;
+    width: 100%;
+    max-width: 16rem;
+    min-height: 22rem;
     filter: blur(0);
-    margin: 0 2rem;
+    transition: min-height 0.5s ease-in-out;
 }
 
 section.quadrada {
-    color: rgba(255, 255, 255, 0.0);
-    background-image: url(../img/respiracao_bg1.png);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 section.diafragmatica {
-    background-image: url(../img/respiracao_bg2.png);
+    background: rgb(118, 201, 251);
+    background: linear-gradient(45deg, rgba(118, 201, 251, 1) 0%, rgba(255, 175, 175, 1) 92%);
 }
 
 section.curativa {
-    color: rgba(255, 255, 255, 0.0);
-    background-image: url(../img/respiracao_bg3.png);
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 }
 
 section a {
@@ -91,6 +107,7 @@ section .infos {
 
 section .infos>p {
     font-size: 0.75rem;
+    text-align: justify;
 }
 
 section img {

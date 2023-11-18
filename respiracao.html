@@ -7,26 +7,42 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/respiracao.css">
         <title>Aplicativo | Respiração</title>
+        <script src="./javascript/respiracao.js"></script>
     </head>
 
     <body>
         <!-- Voltar para a página anterior e título -->
         <header>
-            <a href="./index.html">
-                <img src="./img/back.png" alt="Voltar">
-            </a>
-            <h1>Respiração</h1>
+            <div> <a href="./index.html">
+                    <img src="./img/back.png" alt="Voltar">
+                </a>
+                <h1>Respiração</h1>
+            </div>
+            <img id="favoritos" src="./img/black_heart.png" alt="Favoritos">
         </header>
 
         <!-- Conteúdo principal -->
         <main>
-            <h1>Técnicas de respiração</h1>
-            <p>Praticar técnicas de respiração melhora o bem-estar, reduz o estresse e aumenta a vitalidade geral.</p>
+            <div class="descricao">
+                <h1>Técnicas de respiração</h1>
+                <p>Praticar técnicas de respiração melhora o bem-estar, reduz o estresse e aumenta a vitalidade geral!
+                </p>
+            </div>
             <div class="cards-container">
-                <section class="quadrada">
-                    <h2>Respiração Quadrada</h2>
+                <section class="quadrada active">
+                    <div class="infos">
+                        <h2>Respiração Quadrada</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi</p>
+                        <div class="bottom-container">
+                            <div class="tempo">
+                                <p>2 min</p>
+                                <img src="img/clock.png" alt="Tempo">
+                            </div>
+                            <a href="./respiracao_iniciada.html">Iniciar</a>
+                        </div>
+                    </div>
                 </section>
-                <section class="diafragmatica active">
+                <section class="diafragmatica">
                     <div class="infos">
                         <h2>Respiração Diafragmática</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi</p>
@@ -35,12 +51,22 @@
                                 <p>2 min</p>
                                 <img src="img/clock.png" alt="Tempo">
                             </div>
-                            <a href="./respiracao_iniciar.html">Iniciar</a>
+                            <a href="./respiracao_iniciada.html">Iniciar</a>
                         </div>
                     </div>
                 </section>
                 <section class="curativa">
-                    <h2>Respiração Curativa</h2>
+                    <div class="infos">
+                        <h2>Respiração Curativa</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi</p>
+                        <div class="bottom-container">
+                            <div class="tempo">
+                                <p>2 min</p>
+                                <img src="img/clock.png" alt="Tempo">
+                            </div>
+                            <a href="./respiracao_iniciada.html">Iniciar</a>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
