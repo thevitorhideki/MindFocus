@@ -1,4 +1,6 @@
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 2rem 1rem;
@@ -22,7 +24,15 @@ header h1 {
 main {
     display: flex;
     flex-direction: column;
-    padding: 0 1.75rem;
+    padding: 0 1.75rem 4rem;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 6rem;
+
 }
 
 p {
@@ -43,12 +53,15 @@ p {
 }
 
 .digitacao {
+    padding: 0.25rem 1rem 0.75rem 1.5rem;
     position: fixed;
+    left: 0px;
+    bottom: 0px;
     display: flex;
-    bottom: 2%;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
 }
 
 .envio {
