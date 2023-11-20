@@ -36,13 +36,14 @@ main {
 }
 
 p {
-    max-width: 45%;
+    max-width: 65%;
     font-size: 0.75rem;
     margin-bottom: 1rem;
     border-radius: 0.625rem;
     padding: 1rem;
     background-color: #d5d5d5;
     font-family: 'Roboto Slab', serif;
+    overflow-wrap: break-word;
     color: black;
 }
 
