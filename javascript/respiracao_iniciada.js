@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const heart = document.querySelector('#favoritar');
-    const nome_exercicio = document.querySelector('#nome_exericio').innerHTML;
-    const desc_exercicio = document.querySelector('#desc_exercicio').innerHTML;
-    const tempo_exercicio = document.querySelector('#tempo_exercicio').innerHTML;
+    const infos = JSON.parse(localStorage.getItem('Exercício Iniciado'));
+    const nome_exercicio = infos.nome;
+    const desc_exercicio = infos.desc;
+    const tempo_exercicio = infos.tempo;
+    const bg_color = infos.bg_color;
+    document.querySelector('#nome_exercicio').innerHTML = nome_exercicio;
+    document.querySelector('#desc_exercicio').innerHTML = desc_exercicio;
+    document.querySelector('#tempo_exercicio').innerHTML = tempo_exercicio;
+    document.querySelector('body').style.backgroundImage = bg_color;
 
-    const body = document.querySelector('body');
-    const bodyStyles = getComputedStyle(body);
-    const bg_color = bodyStyles.background;
+    const heart = document.querySelector('#favoritar');
 
     let favoritos = JSON.parse(localStorage.getItem(nome_exercicio));
     heart.src = favoritos === null ? 'img/white_heart.png' : 'img/white_heart_filled.png';
@@ -15,13 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         favoritos = JSON.parse(localStorage.getItem(nome_exercicio));
         if (favoritos === null) {
             heart.src = 'img/white_heart_filled.png';
-            save_info = JSON.stringify({
-                nome: nome_exercicio,
-                desc: desc_exercicio,
-                tempo: tempo_exercicio,
-                bg_color: bg_color,
-            });
-            infos = localStorage.setItem(nome_exercicio, save_info);
+            infos = localStorage.setItem(nome_exercicio, JSON.stringify(infos));
         } else {
             heart.src = 'img/white_heart.png';
             localStorage.removeItem(nome_exercicio);

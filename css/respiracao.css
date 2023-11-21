@@ -52,6 +52,7 @@ main .cards-container {
     align-items: center;
     margin-left: 3rem;
     gap: 1rem;
+    transition: transform 0.5s ease-in-out;
 }
 
 section {
@@ -77,17 +78,17 @@ section.active {
 
 section.quadrada {
     background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 section.diafragmatica {
-    background: rgb(118, 201, 251);
+    background-color: rgb(118, 201, 251);
     background: linear-gradient(45deg, rgba(118, 201, 251, 1) 0%, rgba(255, 175, 175, 1) 92%);
 }
 
 section.curativa {
     background-color: #D9AFD9;
-    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    background: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 }
 
 section a {

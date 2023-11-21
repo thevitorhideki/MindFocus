@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const exercicios = document.querySelectorAll('section');
+    const iniciar = document.querySelectorAll('#iniciar');
     const exercicios_container = document.querySelector('.cards-container');
 
     for (let i = 0; i < exercicios.length; i++) {
@@ -10,7 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
             exercicios[prev].classList.remove('active');
             exercicios[i].classList.add('active');
             exercicios_container.style = `transform: translateX(-${i * 16}rem)`;
-            exercicios_container.style.transition = 'transform 0.5s ease-in-out';
+        });
+        iniciar[i].addEventListener('click', (e) => {
+            let nome_exercicio = exercicios[i].querySelector('#nome_exercicio').innerHTML;
+            let desc = exercicios[i].querySelector('#desc_exercicio').innerHTML;
+            let tempo = exercicios[i].querySelector('#tempo').innerHTML;
+
+            const bodyStyles = getComputedStyle(exercicios[i]);
+            const bg_color = bodyStyles.backgroundImage;
+
+            localStorage.setItem(
+                'Exercício Iniciado',
+                JSON.stringify({ nome: nome_exercicio, desc: desc, tempo: tempo, bg_color: bg_color })
+            );
         });
     }
 });
