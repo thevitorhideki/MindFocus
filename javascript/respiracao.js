@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exercicios[i].classList.add('active');
             exercicios_container.style = `transform: translateX(-${i * 16}rem)`;
         });
-        iniciar[i].addEventListener('click', (e) => {
+        iniciar[i].addEventListener('click', () => {
             let nome_exercicio = exercicios[i].querySelector('#nome_exercicio').innerHTML;
             let desc = exercicios[i].querySelector('#desc_exercicio').innerHTML;
             let tempo = exercicios[i].querySelector('#tempo').innerHTML;

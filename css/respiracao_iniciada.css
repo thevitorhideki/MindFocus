@@ -64,7 +64,7 @@ section.player .progress-bar .circle {
     border-radius: 50%;
     position: absolute;
     top: -0.125rem;
-    left: 0;
+    left: -0.13rem;
 }
 
 section.player .progress-bar .progress {
