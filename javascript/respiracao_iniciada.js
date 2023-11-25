@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const infos = JSON.parse(localStorage.getItem('Exercício Iniciado'));
-    const nome_exercicio = infos.nome;
-    const desc_exercicio = infos.desc;
-    const tempo_exercicio = infos.tempo;
-    const bg_color = infos.bg_color;
+    let infos = JSON.parse(localStorage.getItem('Exercício Iniciado'));
+    let nome_exercicio = infos.nome;
+    let desc_exercicio = infos.desc;
+    let tempo_exercicio = infos.tempo;
+    let bg_color = infos.bg_color;
     document.querySelector('#nome_exercicio').innerHTML = nome_exercicio;
     document.querySelector('#desc_exercicio').innerHTML = desc_exercicio;
     document.querySelector('#tempo_exercicio').innerHTML = tempo_exercicio;
     document.querySelector('body').style.backgroundImage = bg_color;
 
-    const play = document.querySelector('#iniciar');
-    const heart = document.querySelector('#favoritar');
-
+    let heart = document.querySelector('#favoritar');
     let favoritos = JSON.parse(localStorage.getItem(nome_exercicio));
+
     heart.src = favoritos === null ? 'img/white_heart.png' : 'img/white_heart_filled.png';
 
     heart.addEventListener('click', () => {
         favoritos = JSON.parse(localStorage.getItem(nome_exercicio));
         if (favoritos === null) {
             heart.src = 'img/white_heart_filled.png';
-            infos = localStorage.setItem(nome_exercicio, JSON.stringify(infos));
+            localStorage.setItem(nome_exercicio, JSON.stringify(infos));
         } else {
             heart.src = 'img/white_heart.png';
             localStorage.removeItem(nome_exercicio);
         }
     });
 
+    const play = document.querySelector('#iniciar');
     let played = false;
     let counter;
 
@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 seconds++;
 
                 progress.style.width = `${(total_seconds / (tempo_total[0] * 60 + tempo_total[1])) * 100}%`;
-                circle.style.left = `${(total_seconds / (tempo_total[0] * 60 + tempo_total[1])) * 100}%`;
+                circle.style.left = `calc(${
+                    (total_seconds / (tempo_total[0] * 60 + tempo_total[1])) * 100
+                }% - 0.13rem)`;
                 if (seconds === 60) {
                     seconds = 0;
                     minutes++;
@@ -59,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     .padStart(2, '0')}`;
 
                 if (minutes === tempo_total[0] && seconds === tempo_total[1]) {
+                    played = false;
                     play.src = 'img/play-button.png';
                     clearInterval(counter);
                 }
