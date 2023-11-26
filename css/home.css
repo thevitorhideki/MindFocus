@@ -12,10 +12,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 1.75rem 1rem;
     color: white;
     border-radius: 1.875rem;
+    backdrop-filter: blur(0.5rem);
 }
 
 header div {
@@ -46,7 +47,8 @@ nav {
     display: flex;
     border-radius: 1.625rem;
     gap: 1rem;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.5rem);
 }
 
 nav a {

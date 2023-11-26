@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.background = color;
         section.innerHTML = `
         <div class="infos">
-            <h2 id="nome_exercicio">${nome}</h2>
+            <div class="card-header">
+                <h2 id="nome_exercicio">${nome}</h2>
+                <img id="favorito" src="img/white_heart_filled.png" alt="Coração">
+            </div>
             <p id="desc_exercicio">${desc}</p>
             <div class="bottom-container">
                 <div class="tempo">
@@ -19,15 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        const value = JSON.parse(localStorage.getItem(key));
         if (key.includes('Respiração')) {
+            const value = JSON.parse(localStorage.getItem(key));
             cria_elementos(value['nome'], value['desc'], value['bg_color'], value['tempo']);
         }
     }
 
     const iniciar = document.querySelectorAll('#iniciar');
     const exercicios = document.querySelectorAll('section');
+    const favorito = document.querySelectorAll('#favorito');
     for (let i = 0; i < exercicios.length; i++) {
+        favorito[i].addEventListener('click', () => {
+            exercicios[i].style.display = 'none';
+            localStorage.removeItem(exercicios[i].querySelector('#nome_exercicio').innerHTML);
+        });
+
         iniciar[i].addEventListener('click', () => {
             let nome_exercicio = exercicios[i].querySelector('#nome_exercicio').innerHTML;
             let desc = exercicios[i].querySelector('#desc_exercicio').innerHTML;

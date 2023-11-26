@@ -107,8 +107,8 @@ section .infos {
 }
 
 section .infos>p {
+    margin: 0.75rem 0;
     font-size: 0.75rem;
-    text-align: justify;
 }
 
 section img {

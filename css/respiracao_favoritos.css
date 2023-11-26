@@ -41,9 +41,10 @@ section {
     transition: min-height 0.5s ease-in-out;
 }
 
-section.quadrada {
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+section div.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 section a {
@@ -62,8 +63,8 @@ section .infos {
 }
 
 section .infos>p {
+    margin: 0.75rem 0;
     font-size: 0.75rem;
-    text-align: justify;
 }
 
 section img {

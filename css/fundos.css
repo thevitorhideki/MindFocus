@@ -3,17 +3,17 @@ html {
     background-image: url("../img/novo_fundo4.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
 }
 
 body {
-    backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(2rem);
 }
 
 header {
     display: flex;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
+    color: white;
 }
 
 header a {
@@ -34,12 +34,12 @@ figure {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     justify-content: space-around;
 }
 
 figure img {
-    border: var(--bordas);
+    border: 0.15rem solid transparent;
     border-radius: 4%;
     max-width: 9.25rem;
     max-height: 12.375rem;
@@ -47,4 +47,8 @@ figure img {
     width: 100%;
     height: 100%;
     margin-bottom: 0.5rem;
+}
+
+figure img.selected {
+    border: 0.15rem solid white;
 }
