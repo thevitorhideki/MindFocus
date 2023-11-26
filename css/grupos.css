@@ -32,6 +32,7 @@ main {
     flex-direction: column;
     height: 100%;
     margin-top: 6rem;
+    align-items: flex-start;
 
 }
 
