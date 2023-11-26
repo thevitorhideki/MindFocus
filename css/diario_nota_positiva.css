@@ -78,15 +78,19 @@ nav h2 {
     padding: 1.25rem 0.375rem;
 }
 
-.semana li a.qua {
+.semana li a.ativo {
     background: var(--principal);
     color: white;
     font-weight: bold;
     padding: 1.25rem 0.375rem;
 }
 
-.qui, .sex, .sab {
+.dia_nao_existente {
     opacity: 55%;
+}
+
+.oculto {
+    opacity: 0%;
 }
 
 .dia h3 {
