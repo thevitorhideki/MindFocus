@@ -93,11 +93,15 @@ textarea:focus {
 }
 
 .salvar {
-    border: 0.1875rem solid white;
+    border: 0.1875rem solid black;
     border-radius: 0.9375rem;
     font-size: 1rem;
     padding: 1rem 1.44rem;
     font-weight: 700;
     margin: 2.25rem;
-    color: white;
+    color: black;
+}
+
+.oculto {
+    opacity: 0%;
 }

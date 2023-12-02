@@ -85,7 +85,7 @@ nav h2 {
     padding: 1.25rem 0.375rem;
 }
 
-.dia_nao_existente {
+.dia_nao_selecionavel {
     opacity: 55%;
 }
 
@@ -141,7 +141,24 @@ section a {
     text-align: center;
 }
 
+.nota_neg {
+    max-width: 75%;
+    background: var(--negativo);
+    border-radius: 1rem;
+    margin: 1.25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .nota_pos p {
+    margin: 1rem;
+    font-size: 0.8rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.nota_neg p {
     margin: 1rem;
     font-size: 0.8rem;
     font-family: 'Roboto Slab', serif;
