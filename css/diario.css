@@ -142,7 +142,7 @@ section a {
 }
 
 .nota_neg {
-    max-width: 75%;
+    width: 75%;
     background: var(--negativo);
     border-radius: 1rem;
     margin: 1.25rem 0;

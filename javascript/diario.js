@@ -99,25 +99,48 @@ function troca_mes(i) {
     }
 }
 
-function verifica_nota(semana_atual, ultimo_ativo, notas, posneg_s) {
+function notas_local (contador_notas) {
+    let notas = []
+    for (let i=1; i<=contador_notas; i++) {
+        notas.push([parseInt(localStorage.getItem(`Semana${i}: `)), parseInt(localStorage.getItem(`Dia${i}: `)), localStorage.getItem(`PosNeg${i}: `), localStorage.getItem(`Nota${i}: `)])
+    }
+    return notas
+}
+
+function verifica_nota(semana_atual, ultimo_ativo, contador_notas, posneg_s) {
+    notas = notas_local(contador_notas)
     for (j of notas) {
         if (j[0] == semana_atual & j[1] == ultimo_ativo) {
             if (j[2] == 'positivo') {
                 a = document.createElement('a')
                 a.classList.add('nota_pos')
+                a.href = 'diario_view_nota.html'
                 p = document.createElement('p')
                 p.innerHTML = j[3].slice(0, 120)
+                p_total = document.createElement('p')
+                p_total.innerHTML = j[3]
+                p_total.style.display = 'none'
                 a.appendChild(p)
+                a.appendChild(p_total)
                 posneg_s[0].appendChild(a)
             }
             else {
                 a = document.createElement('a')
                 a.classList.add('nota_neg')
+                a.href = 'diario_view_nota.html'
                 p = document.createElement('p')
                 p.innerHTML = j[3].slice(0, 120)
+                p_total = document.createElement('p')
+                p_total.innerHTML = j[3]
+                p_total.style.display = 'none'
                 a.appendChild(p)
+                a.appendChild(p_total)
                 posneg_s[1].appendChild(a)
             }
+        }
+        else {
+            posneg_s[0].innerHTML = '<h2>Positivos</h2>'
+            posneg_s[1].innerHTML = '<h2>Negativos</h2>'
         }
     }
 }
@@ -212,8 +235,6 @@ const semanas = [
     [31, 1, 2, 3, 4, 5, 6]
 ]
 
-// Lista com as notas, semana, dia, positivo ou negativo, conteudo
-let notas = []
 
 document.addEventListener('DOMContentLoaded', function() {
     let dias = document.querySelector('.semana').querySelectorAll('a')
@@ -233,17 +254,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let ultimo_ativo = data.getDay()
 
-    notas.push([localStorage.getItem('Semana: '), localStorage.getItem('Dia: '), localStorage.getItem('PosNeg: '), localStorage.getItem('Nota: ')])
+    if (localStorage.getItem('Contador: ') != null) {
+        contador_notas = parseInt(localStorage.getItem('Contador: '))
+    }
+    else {
+        contador_notas = 0
+        localStorage.setItem('Contador: ', contador_notas)
+    }
 
     ativo[data.getDay()] = true
+
+    for (let k=0; k<=dia_inicial; k++) {
+        dias[k].classList.remove('dia_nao_selecionavel')
+    }
+    for (let k=dia_inicial+1; k<=6; k++) {
+        dias[k].classList.add('dia_nao_selecionavel')
+    }
     
     troca_dia_ativo(dias, ativo)
 
     troca_semana(i, dias)
 
     troca_mes(i)
-    
-    verifica_nota(semana_atual, ultimo_ativo, notas, posneg_s)
+    verifica_nota(semana_atual, ultimo_ativo, contador_notas, posneg_s)
 
     anterior.addEventListener('click', function() {
         if (i == semanas.length - 1) {
@@ -277,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let k=0; k<=dia_inicial; k++) {
                 dias[k].classList.remove('dia_nao_selecionavel')
             }
-            for (let k=dia_inicial; k<6; k++) {
+            for (let k=dia_inicial+1; k<=6; k++) {
                 dias[k].classList.add('dia_nao_selecionavel')
             }
         }
@@ -325,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let k=0; k<=dia_inicial; k++) {
                 dias[k].classList.remove('dia_nao_selecionavel')
             }
-            for (let k=dia_inicial; k<6; k++) {
+            for (let k=dia_inicial+1; k<=6; k++) {
                 dias[k].classList.add('dia_nao_selecionavel')
             }
         }
@@ -354,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ultimo_ativo = j
                 semana_atual = i
                 troca_dia_ativo(dias, ativo)
-                verifica_nota(semana_atual, ultimo_ativo, notas, posneg_s)
+                verifica_nota(semana_atual, ultimo_ativo, contador_notas, posneg_s)
             }
         });
     }
@@ -362,5 +395,22 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("body > main > a").addEventListener('click', function() {
         localStorage.setItem('Semana: ', semana_atual)
         localStorage.setItem('Dia: ', ultimo_ativo)
+        contador_notas += 1
+        localStorage.setItem('Contador: ', contador_notas)
     });
+    
+    notas_pos = document.querySelector('.posneg').querySelectorAll('section')[0].querySelectorAll('a')
+    notas_neg = document.querySelector('.posneg').querySelectorAll('section')[1].querySelectorAll('a')
+    for (let j=0; j<notas_pos.length; j++) {
+        notas_pos[j].addEventListener('click', function() {
+            localStorage.setItem('Ver PosNeg: ', 'positivo')
+            localStorage.setItem('Ver Nota: ', notas_pos[j].querySelectorAll('p')[1].innerHTML)
+        });
+    }
+    for (let j=0; j<notas_neg.length; j++) {
+        notas_neg[j].addEventListener('click', function() {
+            localStorage.setItem('Ver PosNeg: ', 'negativo')
+            localStorage.setItem('Ver Nota: ', notas_neg[j].querySelectorAll('p')[1].innerHTML)
+        });
+    }
 });

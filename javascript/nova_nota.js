@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    semana_atual = localStorage.getItem('Semana: ')
-    ultimo_ativo = localStorage.getItem('Dia: ')
+    semana_atual = parseInt(localStorage.getItem('Semana: '))
+    ultimo_ativo = parseInt(localStorage.getItem('Dia: '))
     nota = document.querySelector('.nota')
     input = document.querySelector('textarea')
     classificador = document.querySelector('.classificador')
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     salvar = document.querySelector('.salvar')
     bool_pos = false
     bool_neg = false
+    contador_notas = parseInt(localStorage.getItem('Contador: '))
 
     pos.addEventListener('click', function() {
         salvar.classList.remove('oculto')
@@ -26,16 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     salvar.addEventListener('click', function() {
         if (bool_pos) {
-            localStorage.setItem('Semana: ', semana_atual)
-            localStorage.setItem('Dia: ', ultimo_ativo)
-            localStorage.setItem('PosNeg: ', 'positivo')
-            localStorage.setItem('Nota: ', input.value)
+            localStorage.setItem(`Semana${contador_notas}: `, semana_atual)
+            localStorage.setItem(`Dia${contador_notas}: `, ultimo_ativo)
+            localStorage.setItem(`PosNeg${contador_notas}: `, 'positivo')
+            localStorage.setItem(`Nota${contador_notas}: `, input.value)
         }
         else {
-            localStorage.setItem('Semana: ', semana_atual)
-            localStorage.setItem('Dia: ', ultimo_ativo)
-            localStorage.setItem('PosNeg: ', 'negativo')
-            localStorage.setItem('Nota: ', input.value)
+            localStorage.setItem(`Semana${contador_notas}: `, semana_atual)
+            localStorage.setItem(`Dia${contador_notas}: `, ultimo_ativo)
+            localStorage.setItem(`PosNeg${contador_notas}: `, 'negativo')
+            localStorage.setItem(`Nota${contador_notas}: `, input.value)
         }
         window.location.href = 'diario.html'
     })
