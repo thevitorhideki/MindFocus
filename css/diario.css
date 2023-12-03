@@ -134,22 +134,26 @@ section a {
     width: 75%;
     background: var(--positivo);
     border-radius: 1rem;
-    margin: 1.25rem 0;
+    margin-top: 1.25rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .nota_neg {
     width: 75%;
     background: var(--negativo);
     border-radius: 1rem;
-    margin: 1.25rem 0;
+    margin-top: 1.25rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .nota_pos p {
