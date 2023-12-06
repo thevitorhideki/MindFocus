@@ -1,7 +1,7 @@
 header {
     display: flex;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
 }
 
 header a {
@@ -139,7 +139,7 @@ section a {
 }
 
 .nota_neg {
-    width: 75%;
+    max-width: 75%;
     background: var(--negativo);
     border-radius: 1rem;
     margin-top: 1.25rem;
