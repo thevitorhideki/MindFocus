@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Troca a imagem de fundo pela imagem salva no localStorage
     html = document.querySelector('html');
-    
 
     if (localStorage.getItem('fundoUrl')) {
         html.style.backgroundImage = localStorage.getItem('fundoUrl');
@@ -14,9 +13,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var date = new Date();
     var dia = date.getDate();
     var ano = date.getFullYear();
-    
+
     var mes = date.getMonth();
-    const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembo', 'Outubro', 'Novembro', 'Dezembro'];
+    const meses = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembo',
+        'Outubro',
+        'Novembro',
+        'Dezembro',
+    ];
     mes = meses[mes];
 
     data = document.querySelector('p');
